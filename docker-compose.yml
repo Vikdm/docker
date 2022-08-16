@@ -5,13 +5,11 @@ services:
   db:
     image: postgres:12-alpine
     ports:
-      - '7777:7777'
+      - '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_RANDOM_ROOT_PASSWORD=yes
-      - POSTGRES_DATABASE=app
       - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=Vtqyrey!Fas
+      - POSTGRES_PASSWORD=admin
 
 
