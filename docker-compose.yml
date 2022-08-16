@@ -1,16 +1,17 @@
-version: '3.1'
+version: '3.7'
 
 services:
 
-  app:
+  db:
     image: postgres:12-alpine
-
+    ports:
+      - '7777:7777'
     volumes:
       - ./data:/var/lib/postgresql/data
     environment:
       - POSTGRES_RANDOM_ROOT_PASSWORD=yes
       - POSTGRES_DATABASE=app
-      - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=Vtqyrey!Fas
 
 
